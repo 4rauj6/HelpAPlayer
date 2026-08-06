@@ -1,1 +1,17 @@
 @import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#about-p {
+  padding: 0px 20px;
+}
+
+#about-content {
+  justify-content: center;
+  align-items: center;
+  height: 65vh;
+}
