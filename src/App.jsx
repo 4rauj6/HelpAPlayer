@@ -5,6 +5,7 @@ import Homepage from "./components/Homepage";
 import About from "./components/About";
 import UserFeed from "./components/User-feed";
 import LegoBatman from "./components/LegoBatmanPage";
+import CarrionPage from "./components/CarrionPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/your-feed" element={<UserFeed />} />
         <Route path="/lego-batman" element={<LegoBatman />} />
+        <Route path="/carrion" element={<CarrionPage />} />
       </Routes>
     </>
   );
