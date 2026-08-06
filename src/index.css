@@ -15,3 +15,7 @@
   align-items: center;
   height: 65vh;
 }
+
+#gameName {
+  padding: 0 20px;
+}

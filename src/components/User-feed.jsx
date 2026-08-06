@@ -1,4 +1,4 @@
-function UserFeed () {
+function UserFeed() {
     return (
         <>
         </>

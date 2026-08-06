@@ -7,7 +7,7 @@ function About() {
         <h1 className="text-5xl h-15">Know more about HelpAPlayer</h1>
         <h1 className="text-4xl h-15">Made by gamers for gamers</h1>
         <ScrollIntoView selector="#areaToGo" smooth={true}>
-          <button className="text-white bg-amber-500 cursor-pointer hover: rounded-sm ">
+          <button className="text-black bg-transparent border border-solid border-black w-30 h-10 cursor-pointer rounded-xl transition delay-10 duration-200 ease-in-out hover: hover:bg-amber-500 hover:text-white hover:border-transparent">
             Know More
           </button>
         </ScrollIntoView>
