@@ -1,11 +1,10 @@
 import { Link } from "react-router-dom";
-
 const cover =
-  "https://cdn1.epicgames.com/7c6d889f36124ae4b6269f8e1698a547/offer/EGS_CARRION_PhobiaGameStudio_S3-2560x1440-790cef9b876a79f75582490ebd1e6ee4.jpg";
+  "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.ytimg.com%2Fvi%2FpZLCp5VHtNY%2Fmaxresdefault.jpg&f=1&nofb=1&ipt=72b46428b440b52535f2be35333d3ab42ad87ed2330c7fa1fe142dea26f166d6";
 
-function CarrionCard() {
+function HitmanABCard() {
   return (
-    <Link to="/carrion">
+    <Link to="/hitman-absolution">
       <article className="group relative isolate flex flex-col justify-end overflow-hidden rounded-xl w-270 h-150">
         <img
           src={cover}
@@ -17,18 +16,17 @@ function CarrionCard() {
           id="gameName"
           className="z-10 mt-3 text-4xl font-bold text-gray-100  "
         >
-          Carrion
+          Hitman: Absolution
         </h3>
         <div
           id="gameName"
           className="z-10 overflow-hidden text-sm leading-10 text-gray-100 flex flex-row gap-3"
         >
-          <p>Devolver</p>
-          <p>Phobia Game Studio</p>
+          <p>Io-Interactive A/S</p>
         </div>
       </article>
     </Link>
   );
 }
 
-export default CarrionCard;
+export default HitmanABCard;

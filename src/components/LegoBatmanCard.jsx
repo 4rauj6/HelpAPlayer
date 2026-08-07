@@ -5,20 +5,28 @@ const cover =
 function LegoBatmanCard() {
   return (
     <Link to="/lego-batman">
-      <article class="group relative isolate flex flex-col justify-end overflow-hidden rounded-xl w-270 h-150">
+      <article className="group relative isolate flex flex-col justify-end overflow-hidden rounded-xl w-270 h-150">
         <img
           src={cover}
           alt="University of Southern California"
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-120"
         />
-        <div class="absolute inset-0 pointer-events-none"></div>
-        <h3 id="gameName" class="z-10 mt-3 text-4xl font-bold text-gray-100  ">Lego Batman - The videogame</h3>
-        <div id="gameName" class="z-10 overflow-hidden text-sm leading-10 text-gray-100 flex flex-row gap-3">
+        <div className="absolute inset-0 pointer-events-none"></div>
+        <h3
+          id="gameName"
+          className="z-10 mt-3 text-4xl font-bold text-gray-100  "
+        >
+          Lego Batman - The videogame
+        </h3>
+        <div
+          id="gameName"
+          className="z-10 overflow-hidden text-sm leading-10 text-gray-100 flex flex-row gap-3"
+        >
           <p>TT games</p>
           <p>Warner Bros.</p>
         </div>
       </article>
-    </Link >
+    </Link>
   );
 }
 
