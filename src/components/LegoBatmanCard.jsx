@@ -11,7 +11,7 @@ function LegoBatmanCard() {
           alt="University of Southern California"
           className="absolute inset-0 h-full w-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-120"
         />
-        <div className="absolute inset-0 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-black/60 opacity-0 transition-opacity duration-300 group-hover:opacity-60"></div>
         <h3
           id="gameName"
           className="z-10 mt-3 text-4xl font-bold text-gray-100  "
