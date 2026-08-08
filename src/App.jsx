@@ -3,10 +3,10 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Homepage from "./components/Homepage";
 import About from "./components/About";
-import UserFeed from "./components/User-feed";
 import LegoBatman from "./components/LegoBatmanPage";
 import CarrionPage from "./components/CarrionPage";
 import HitmanABPage from "./components/HitmanABPage";
+import HitmanBM from "./components/HitmanBM";
 
 function App() {
   return (
@@ -15,10 +15,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/your-feed" element={<UserFeed />} />
         <Route path="/lego-batman" element={<LegoBatman />} />
         <Route path="/carrion" element={<CarrionPage />} />
         <Route path="/hitman-absolution" element={<HitmanABPage />} />
+        <Route path="/hitman-blood-money" element={<HitmanBM />} />
       </Routes>
     </>
   );

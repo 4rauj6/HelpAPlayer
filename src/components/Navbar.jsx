@@ -1,28 +1,32 @@
 import { useState, useMemo } from "react";
 import { Link } from "react-router-dom";
 
+const items = [
+  { to: "/lego-batman", label: "Lego batman" },
+  { to: "/hitman-absolution", label: "Hitman Absolution" },
+  { to: "/carrion", label: "Carrion" },
+];
+
 const Navbar = () => {
   const [query, setQuery] = useState("");
-
-  const items = [
-    { to: "/lego-batman", label: "Lego batman" },
-    { to: "/hitman-absolution", label: "Hitman Absolution" },
-    { to: "/carrion", label: "Carrion" },
-  ];
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase();
 
     if (!q) return [];
-    return items.filter(item => item.label.toLowerCase().includes(q));
+    return items.filter((item) => item.label.toLowerCase().includes(q));
   }, [query]);
 
-  const ulBg = document.getElementById("ul");
+  document.addEventListener("click", (event) => {
+    const ul = document.getElementById("ul");
+    if (!ul.contains(event.target)) {
+      ul.style.display = "none";
+    }
+  });
 
-  const searchResultBox = (e) => {
-    e.persist();
-    e.target.style.display = "none"
-  }
+  const clearSearchFilter = () => {
+    setQuery("");
+  };
 
   return (
     <div>
@@ -35,30 +39,33 @@ const Navbar = () => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />
-          <div className="flex items-center justify-start fixed z-50" onClick={searchResultBox}>
-            <ul id="ul" className=" bg-white" onClick={searchResultBox}>
-              {filtered.map(it => (
-                <li className="text-start w-90 h-10 group-hover: hover:text-amber-500" key={it.to}>
-                  <Link to={it.to}>{it.label}</Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {filtered.length > 0 && (
+            <div className="flex items-center justify-start fixed z-50">
+              <ul id="ul" className=" bg-white">
+                {filtered.map((item) => (
+                  <li
+                    className="text-start w-90 h-10 group-hover: hover:text-amber-500"
+                    key={item.to}
+                  >
+                    <Link to={item.to} onClick={clearSearchFilter}>
+                      {item.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
 
         <Link to="/" className="hover:text-amber-50">
           Home
         </Link>
 
-        <Link to="/user-feed" className="hover:text-amber-50">
-          Your feed
-        </Link>
-
         <Link to="/about" className="hover:text-amber-50">
           About
         </Link>
-      </nav >
-    </div >
+      </nav>
+    </div>
   );
 };
 
